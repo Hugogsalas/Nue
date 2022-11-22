@@ -1,0 +1,38 @@
+type User {
+  id: String
+  email: String
+  address: String
+  name: String
+  lastName: String
+  secondLastName: String
+  phone: String
+}
+
+type AuthToken {
+  id: String
+  token: String
+  refreshToken: String
+}
+
+type RefreshTokenParams {
+  refreshToken: String
+  lastToken: String
+}
+
+type Query {
+  logIn(email: String!, password: String!): AuthToken
+
+  refreshToken(lastToken: String!, refreshToken: String!): RefreshTokenParams
+}
+
+type Mutation {
+  signIn(
+    email: String!
+    address: String
+    password: String!
+    name: String
+    lastName: String
+    secondLastName: String
+    phone: String
+  ): String
+}

@@ -18,7 +18,7 @@ export const resolver = {
   refreshToken: (params: RefreshTokenParams): ResponseRefreshToken => {
     return refreshTokenResolver(params);
   },
-  signIn: async (params: SigInParams): Promise<string> => {
+  signIn: async (params: SigInParams): Promise<String> => {
     return await signInResolver(params);
   },
 };

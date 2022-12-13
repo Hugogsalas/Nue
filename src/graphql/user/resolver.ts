@@ -11,7 +11,7 @@ import {
   RefreshTokenParams,
 } from '../../models';
 
-export const resolver = {
+module.exports = {
   logIn: async (params: LoginParams): Promise<AuthToken> => {
     return await logInResolver(params);
   },

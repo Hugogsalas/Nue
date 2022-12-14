@@ -84,7 +84,7 @@ export const signIn = async ({
   name,
   phone,
   secondLastName,
-}: SigInParams): Promise<string> => {
+}: SigInParams): Promise<String> => {
   const newUser = new UserModel({
     email,
     password,

@@ -11,14 +11,14 @@ import {
   RefreshTokenParams,
 } from '../../models';
 
-export const resolver = {
+module.exports = {
   logIn: async (params: LoginParams): Promise<AuthToken> => {
     return await logInResolver(params);
   },
   refreshToken: (params: RefreshTokenParams): ResponseRefreshToken => {
     return refreshTokenResolver(params);
   },
-  signIn: async (params: SigInParams): Promise<string> => {
+  signIn: async (params: SigInParams): Promise<String> => {
     return await signInResolver(params);
   },
 };

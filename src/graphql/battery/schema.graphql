@@ -1,0 +1,19 @@
+type Battery {
+  _id: String
+  name: String
+  Type: String
+  voltages: [Float]
+}
+
+type Query {
+  getBatteryList: [Battery]
+}
+
+type Mutation {
+  updateBattery(
+    _id: String!
+    name: String
+    Type: String
+    voltages: [Float]
+  ): Battery
+}
